@@ -13,13 +13,13 @@ class GradientContainer extends StatelessWidget {
   Widget build(context) {
     return Container(
       decoration: const BoxDecoration(
-        gradient: LinearGradient(colors: const [
+        gradient: LinearGradient(colors: [
           Colors.blue,
           Colors.purple,
           Colors.pink,
         ], begin: startAlignment, end: endAlignment),
       ),
-      child: const Center(child: StyledText()),
+      child: const Center(child: StyledText('Hello michie')),
     );
   }
 }
