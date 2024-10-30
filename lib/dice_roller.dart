@@ -1,6 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
+var randomizer = Random(); //needs to be created only once so no need to be kept inside class, can be global
+
 class DiceRoller extends StatefulWidget {
   const DiceRoller({super.key});
   @override
@@ -10,11 +12,12 @@ class DiceRoller extends StatefulWidget {
 }
 
 class _DiceRollerState extends State<DiceRoller> {
+  // var randomizer = Random();
   var currentDiceRoll = 1;
 
   void rollDice() {
     setState(() {
-      currentDiceRoll = Random().nextInt(6) + 1; //redundant obj creation and deletion: avoid
+      currentDiceRoll = randomizer.nextInt(6) + 1;
     });
   }
 
