@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:first_app/styled_text.dart';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomLeft;
@@ -20,7 +19,7 @@ class GradientContainer extends StatelessWidget {
         gradient: LinearGradient(
           colors: [color1, color2], begin: startAlignment, end: endAlignment),
       ),
-      child: const Center(child: StyledText('Hello michie')),
+      child: Center(child: Image.asset('assets/images/dice-1.png', width: 200)),
     );
   }
 }
